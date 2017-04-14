@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\SEFACAN\Sefacan.Web\Sefacan.Web\bin\Release\PublishOutput</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/EmailBody.html">
+      <publishTime>04/03/2017 15:00:11</publishTime>
+    </File>
+    <File Include="App_Data/Template/about-us.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/assets/blur.svg">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/assets/zocial/css/zocial-regular-webfont.eot">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/assets/zocial/css/zocial-regular-webfont.svg">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/assets/zocial/css/zocial-regular-webfont.ttf">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/assets/zocial/css/zocial-regular-webfont.woff">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/assets/zocial/css/zocial-regular-webfontd41d.eot">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/bower_components/sass-bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/bower_components/sass-bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/bower_components/sass-bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/bower_components/sass-bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/bower_components/sass-bootstrap/fonts/glyphicons-halflings-regulard41d.eot">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/contact.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/elements.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/features.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/home-ads.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/home-full-width.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/home-multi-columns.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/home-no-sidebar.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/home-slider.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/420-slider/slider-image-1.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/420-slider/slider-image-2.jpg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/420-slider/slider-image-3.jpg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy-licensed/about-us-image.jpg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy-licensed/blog-image-2.jpg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy-licensed/blog-image-3-small.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy-licensed/blog-image-small.jpg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy-licensed/blog-image.jpg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/about-1.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/about-2.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/about-3.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/about-4.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/about-5.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/about-6.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/ads-160x600.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/ads-300x250.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/ads-468x60.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/ads-728x90.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/awesome-support.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/blog-image-4.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/glyphicons-and-zocial-icons.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/layered-psds-included.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/lightning-fast.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/readable.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/responsive-and-retina-ready.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/search-engine-optimized.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/unlimited-colors-and-layouts.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/dummy/video-placeholder.jpg">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/favicon.png">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/icon-playcc13.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/images/logo.png">
+      <publishTime>04/03/2017 15:00:13</publishTime>
+    </File>
+    <File Include="App_Data/Template/index-2.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/index.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/js/main.js">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="App_Data/Template/search-results.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/single-post-full-width.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/single-post-video.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/single-post-without-image.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/single-post.html">
+      <publishTime>04/03/2017 15:00:12</publishTime>
+    </File>
+    <File Include="App_Data/Template/stylesheets/363f9277.main.css">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>03/01/2017 16:36:14</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>01/29/2017 13:03:52</publishTime>
+    </File>
+    <File Include="bin/BouncyCastle.Crypto.dll">
+      <publishTime>04/26/2016 12:16:00</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/MailKit.dll">
+      <publishTime>03/12/2017 15:26:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/MimeKit.dll">
+      <publishTime>03/12/2017 15:02:14</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/20/2017 20:03:18</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Core.dll">
+      <publishTime>04/04/2017 15:56:03</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Core.dll.config">
+      <publishTime>04/03/2017 15:00:09</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Data.dll">
+      <publishTime>04/11/2017 10:00:12</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Data.dll.config">
+      <publishTime>04/03/2017 15:00:10</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Framework.dll">
+      <publishTime>04/11/2017 10:00:12</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Framework.dll.config">
+      <publishTime>04/03/2017 15:00:10</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Service.dll">
+      <publishTime>04/11/2017 10:00:12</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Service.dll.config">
+      <publishTime>04/03/2017 15:00:11</publishTime>
+    </File>
+    <File Include="bin/Sefacan.Web.dll">
+      <publishTime>04/11/2017 10:00:13</publishTime>
+    </File>
+    <File Include="bin/StackExchange.Redis.StrongName.dll">
+      <publishTime>02/03/2017 14:30:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/css/style.css">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/zocial-regular-webfont.eot">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/zocial-regular-webfont.svg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/zocial-regular-webfont.ttf">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/zocial-regular-webfont.woff">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/fonts/zocial-regular-webfontd41d.eot">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/img/420-slider/slider-image-1.jpg">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Content/img/420-slider/slider-image-2.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/420-slider/slider-image-3.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/blur.svg">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/img/dummy-licensed/about-us-image.jpg">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/dummy-licensed/blog-image-2.jpg">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Content/img/dummy-licensed/blog-image-3-small.jpg">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/dummy-licensed/blog-image-small.jpg">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/dummy-licensed/blog-image.jpg">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/dummy/about-1.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/about-2.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/about-3.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/about-4.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/about-5.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/about-6.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/ads-160x600.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/ads-300x250.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/ads-468x60.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/ads-728x90.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/awesome-support.png">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/blog-image-4.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/glyphicons-and-zocial-icons.png">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/layered-psds-included.png">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/lightning-fast.png">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/readable.png">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/dummy/responsive-and-retina-ready.png">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/dummy/search-engine-optimized.png">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/dummy/unlimited-colors-and-layouts.png">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/dummy/video-placeholder.jpg">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/img/favicon.png">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/img/icon-playcc13.png">
+      <publishTime>04/03/2017 15:00:14</publishTime>
+    </File>
+    <File Include="Content/img/logo.png">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/nophoto.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/img/sefacan.jpg">
+      <publishTime>04/03/2017 15:00:15</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap.min.js">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/js/jquery.min.js">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/js/jquery.unobtrusive-ajax.min.js">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/js/jquery.validate.min.js">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/js/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Content/js/main.js">
+      <publishTime>04/03/2017 15:00:16</publishTime>
+    </File>
+    <File Include="Error.html">
+      <publishTime>04/03/2017 15:00:11</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/03/2017 15:00:11</publishTime>
+    </File>
+    <File Include="NotFound.html">
+      <publishTime>04/03/2017 15:00:11</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/03/2017 15:00:11</publishTime>
+    </File>
+    <File Include="robots.txt">
+      <publishTime>04/05/2017 09:21:53</publishTime>
+    </File>
+    <File Include="Views/Category/Index.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/Page/About.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/Page/Contact.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/Page/Project.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/Page/Search.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/Post/Index.cshtml">
+      <publishTime>04/04/2017 16:29:26</publishTime>
+    </File>
+    <File Include="Views/Shared/_Footer.cshtml">
+      <publishTime>04/05/2017 09:32:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_Header.cshtml">
+      <publishTime>04/05/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/04/2017 17:07:16</publishTime>
+    </File>
+    <File Include="Views/Shared/_Post.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Sidebar.cshtml">
+      <publishTime>04/05/2017 09:36:27</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/03/2017 15:00:17</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/04/2017 15:56:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+D:\SEFACAN\Sefacan.Core\bin\Debug\Sefacan.Core.dll.config
+D:\SEFACAN\Sefacan.Core\bin\Debug\Sefacan.Core.dll
+D:\SEFACAN\Sefacan.Core\bin\Debug\Sefacan.Core.pdb
+D:\SEFACAN\Sefacan.Core\bin\Debug\Autofac.dll
+D:\SEFACAN\Sefacan.Core\bin\Debug\Newtonsoft.Json.dll
+D:\SEFACAN\Sefacan.Core\bin\Debug\Autofac.xml
+D:\SEFACAN\Sefacan.Core\bin\Debug\Newtonsoft.Json.xml
+D:\SEFACAN\Sefacan.Core\obj\Debug\Sefacan.Core.csprojResolveAssemblyReference.cache
+D:\SEFACAN\Sefacan.Core\obj\Debug\Sefacan.Core.dll
+D:\SEFACAN\Sefacan.Core\obj\Debug\Sefacan.Core.pdb

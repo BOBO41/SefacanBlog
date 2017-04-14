@@ -1,0 +1,16 @@
+﻿@model CategoryDetailModel
+@{
+    ViewBag.Title = Model.Name;
+}
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        @foreach (var item in Model.Posts)
+        {
+            @Html.Partial("_Post", item)
+        }
+        <div class="pagination">
+            @Html.Pager(Model.Posts.PageSize, Model.Posts.PageNumber, Model.Posts.TotalItemCount)
+        </div>
+    </div>
+    @Html.Action("Sidebar", "Home")
+</div>

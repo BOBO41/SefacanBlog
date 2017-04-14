@@ -1,0 +1,15 @@
+﻿User-agent: *
+Disallow: /Search/
+Disallow: /About-Me/
+Disallow: /Projects/
+Disallow: /Contact/
+Disallow: /iletisim.html
+Disallow: /hakkimda.html
+Disallow: /referanslarim.html
+Disallow: /?q=*
+Disallow: /Content/files/
+Disallow: /Content/css/
+Disallow: /Content/js/
+Disallow: /Content/fonts/
+
+Sitemap:http://www.sefacan.net/sitemap.xml

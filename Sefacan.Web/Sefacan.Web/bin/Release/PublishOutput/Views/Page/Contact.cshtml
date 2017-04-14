@@ -1,0 +1,40 @@
+﻿@model ContactModel
+@{
+    ViewBag.Title = "İletişim";
+}
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <div class="boxed push-down-45">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="contact">
+                        <h2>İletişim</h2>
+                        <p class="contact__text">Bildiklerimi, bilmediklerimi, merak ettiklerinizi veya merak edeceğimi düşündüğünüz konuları aşağıya yazarak bana aktarabilirsiniz.</p>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    @Html.TextBoxFor(x => x.Name, new { placeholder = "Ad soyad *" })
+                                    @Html.ValidationMessageFor(x=>x.Name)
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    @Html.TextBoxFor(x => x.Email, new { placeholder = "Email *" })
+                                    @Html.ValidationMessageFor(x => x.Email)
+                                </div>
+                                <div class="col-xs-12">
+                                    @Html.TextAreaFor(x => x.Message, new { rows = 4, placeholder = "Mesaj *" })
+                                    @Html.ValidationMessageFor(x => x.Message)
+                                </div>
+                                <div class="col-xs-12">
+                                    <input type="submit" value="Gönder" class="btn btn-primary" /> <span class="contact__obligatory">* ile işaretlenmiş alanlar zorunludur.</span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Action("Sidebar", "Home")
+</div>

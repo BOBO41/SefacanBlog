@@ -1,0 +1,134 @@
+﻿@model SidebarModel
+<div class="col-xs-12 col-md-4">
+    <div class="widget-author boxed push-down-30">
+        <div class="widget-author__image-container">
+            <div class="widget-author__avatar--blurred">
+                <img src="@Setting("general.editor.picture").Value" alt="@Setting("general.editor.name").Value" width="90" height="90">
+            </div>
+            <img class="widget-author__avatar" src="@Setting("general.editor.picture").Value" alt="@Setting("general.editor.name").Value" width="90" height="90">
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <h4>@Setting("general.editor.name").Value</h4>
+                <p>@Setting("general.slogan").Value</p>
+            </div>
+        </div>
+        @if (Setting("general.socialmedia.enabled").BoolValue)
+        {
+            <div class="social-icons">
+                <a href="#" class="social-icons__container"><span class="zocial-facebook"></span></a>
+                <a href="#" class="social-icons__container"><span class="zocial-twitter"></span></a>
+                <a href="#" class="social-icons__container"> <span class="zocial-youtube"></span></a>
+                <a href="#" class="social-icons__container"><span class="zocial-github"></span></a>
+            </div>
+        }
+    </div>
+    <div class="sidebar boxed push-down-30">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="widget-categories push-down-30 hidden-xs">
+                    @using (Html.BeginForm("Search", "Page", FormMethod.Post, new { id = "searchForm", role = "search" }))
+                    {
+                        <div class="input-group add-on">
+                            <input type="text" class="form-control" autocomplete="off" placeholder="Ara.." id="term" />
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="widget-categories push-down-30">
+                    <h6>Kategoriler</h6>
+                    <ul>
+                        @foreach (var item in Model.Categories)
+                        {
+                            <li>
+                                @if (Setting("category.postcount.enabled").BoolValue)
+                                {
+                                    <a href="/@item.Url">
+                                        @item.Name <span class="widget-categories__text">(@item.PostCount)</span>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="/@item.Url">
+                                        @item.Name
+                                    </a>
+                                }
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="widget-posts push-down-30">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#recent-posts" data-toggle="tab" style="padding:5px 10px">
+                                <span class="glyphicon glyphicon-time"></span>
+                                &nbsp;Son Yazılar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#popular-posts" data-toggle="tab" style="padding:5px 10px">
+                                <span class="glyphicon glyphicon-flash"></span>
+                                &nbsp;Popüler Yazılar
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="recent-posts">
+                            @foreach (var item in Model.RecentPosts)
+                            {
+                                <div class="push-down-15">
+                                    <h5>
+                                        <a href="/@item.Url">@item.Title</a>
+                                    </h5>
+                                    <span class="widget-posts__time">@item.CreateDate.ToRelativeFormat()</span>
+                                </div>
+                            }
+                        </div>
+                        <div class="tab-pane fade" id="popular-posts">
+                            @foreach (var item in Model.PopularPosts)
+                            {
+                                <div class="push-down-15">
+                                    <h5>
+                                        <a href="/@item.Url">@item.Title</a>
+                                    </h5>
+                                    <span class="widget-posts__time">@item.CreateDate.ToRelativeFormat()</span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="tags widget-tags">
+                    <h6>Etiketler</h6>
+                    <hr>
+                    @foreach (var item in Model.Tags)
+                    {
+                        <a href="/Search/@item.Name.ToLowerInvariant()" class="tags__link">@item.Name</a>
+                    }
+                </div>
+                <div class="widget-facebook push-down-30">
+                    @Html.Raw(Setting("general.socialmedia.code").Value)
+                </div>
+                @if (Setting("post.recentcomment").BoolValue)
+                {
+                    <div class="widget-recent-comments push-down-30">
+                        <h6>Son Yorumlar</h6>
+                        <ul>
+                            @foreach (var item in Model.RecentComments)
+                            {
+                                <li>
+                                    @item.FullName
+                                    <a href="/@item.PostUrl#comments">@item.PostName</a>
+                                    <br>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

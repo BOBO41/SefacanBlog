@@ -1,0 +1,13 @@
+D:\SEFACAN\Sefacan.Core\bin\Release\Sefacan.Core.dll.config
+D:\SEFACAN\Sefacan.Core\bin\Release\Sefacan.Core.dll
+D:\SEFACAN\Sefacan.Core\bin\Release\Sefacan.Core.pdb
+D:\SEFACAN\Sefacan.Core\bin\Release\Autofac.dll
+D:\SEFACAN\Sefacan.Core\bin\Release\Newtonsoft.Json.dll
+D:\SEFACAN\Sefacan.Core\bin\Release\RedLock.StrongName.dll
+D:\SEFACAN\Sefacan.Core\bin\Release\StackExchange.Redis.StrongName.dll
+D:\SEFACAN\Sefacan.Core\bin\Release\Autofac.xml
+D:\SEFACAN\Sefacan.Core\bin\Release\Newtonsoft.Json.xml
+D:\SEFACAN\Sefacan.Core\bin\Release\StackExchange.Redis.StrongName.xml
+D:\SEFACAN\Sefacan.Core\obj\Release\Sefacan.Core.csprojResolveAssemblyReference.cache
+D:\SEFACAN\Sefacan.Core\obj\Release\Sefacan.Core.dll
+D:\SEFACAN\Sefacan.Core\obj\Release\Sefacan.Core.pdb

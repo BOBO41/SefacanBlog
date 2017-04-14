@@ -1,0 +1,94 @@
+﻿@{
+    string title = Setting("general.meta.title").Value;
+    string description = Setting("general.meta.description").Value;
+    string picture = Setting("general.editor.picture").Value;
+
+    if (ViewBag.Title != null)
+    {
+        title = string.Format("{0} - {1}", ViewBag.Title, title);
+    }
+    if (ViewBag.Description != null)
+    {
+        description = ViewBag.Description;
+    }
+    if (ViewBag.Picture != null)
+    {
+        picture = ViewBag.Picture;
+    }
+
+    picture = WebHelper.GetDomainUrl + picture;
+}
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Html.Raw(title)</title>
+    <meta name="description" content="@Html.Raw(description)" />
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="@Html.Raw(title)" />
+    <meta itemprop="description" content="@Html.Raw(description)" />
+    <meta itemprop="headline" content="@Html.Raw(title)" />
+    <meta itemprop="image" content="@Html.Raw(picture)" />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="@Html.Raw(picture)" />
+    <meta name="twitter:site" content="@Setting("general.editor.name").Value" />
+    <meta name="twitter:title" content="@Html.Raw(title)" />
+    <meta name="twitter:description" content="@Html.Raw(description)" />
+    <meta name="twitter:creator" content="@Html.Raw("@ssefaccan")" />
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="@Html.Raw(picture)" />
+    <meta name="twitter:image:alt" content="@Html.Raw(title)">
+    <!-- Open Graph data -->
+    <meta itemprop="og:headline" content="@Html.Raw(title)" />
+    <meta property="og:title" content="@Html.Raw(title)" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="@WebHelper.GetCurrentUrl(true)" />
+    <meta property="og:image" content="@Html.Raw(picture)" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:description" content="@Html.Raw(description)" />
+    <meta property="og:site_name" content="Sefacan.net" />
+    @if (ViewBag.CreateDate != null && ViewBag.UpdateDate != null)
+    {
+        <meta property="article:published_time" content="@ViewBag.CreateDate" />
+        <meta property="article:modified_time" content="@ViewBag.UpdateDate" />
+    }
+    <meta property="article:section" content="Personel Blog, Article" />
+    <meta property="article:tag" content="@Html.Raw(Setting("general.slogan").Value)" />
+    <meta property="fb:app_id" content="@Html.Raw(Setting("general.facebook.appid").Value)" />
+    <link rel="canonical" href="@WebHelper.GetCurrentUrl(true)" />
+    @Html.Style("~/Content/css/bootstrap.min.css")
+    @Html.Style("~/Content/css/style.css")
+</head>
+<body>
+    @Html.Action("Header", "Home")
+    <div class="container">
+        @RenderBody()
+    </div>
+    @Html.Action("Footer", "Home")
+    @Html.Script("~/Content/js/jquery.min.js")
+    @Html.Script("~/Content/js/bootstrap.min.js")
+    @Html.Script("~/Content/js/jquery.unobtrusive-ajax.min.js")
+    @Html.Script("~/Content/js/jquery.validate.min.js")
+    @Html.Script("~/Content/js/jquery.validate.unobtrusive.min.js")
+    @Html.Script("~/Content/js/main.js")
+    <a href="#" class="btn-top">
+        <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+    @if (Setting("general.socialmedia.enabled").BoolValue)
+    {
+        <script>
+        @Html.Raw(Setting("general.analytics.code").Value)
+        </script>
+        <script>
+            function share() {
+                FB.ui({
+                    method: 'share',
+                    display: 'popup',
+                    href: '@WebHelper.GetCurrentUrl(true)',
+                }, function (response) { });
+            }
+        </script>
+    }
+</body>
+</html>

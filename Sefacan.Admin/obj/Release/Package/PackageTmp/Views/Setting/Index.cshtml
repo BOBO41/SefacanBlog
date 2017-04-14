@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Ayarlar";
+    int i = 0;
+    int j = 0;
+}
+@model IEnumerable<SettingModel>
+<div class="col-md-10">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-box-large">
+                <ul class="nav nav-tabs">
+                    @foreach (var item in Model)
+                    {
+                        string active = i == 0 ? "active" : string.Empty;
+                        <li class="@active">
+                            <a href="#tab-@i" data-toggle="tab" aria-expanded="true">@item.Name</a>
+                        </li>
+                        i++;
+                    }
+                </ul>
+                @using (Html.BeginForm("Index", "Setting", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="tab-content clearfix">
+                        @foreach (var item in Model)
+                        {
+                            string active = j == 0 ? "active" : string.Empty;
+                            <div class="tab-pane @active" id="tab-@j" style="padding:15px 0">
+                                    @Html.Partial("_Setting", item.Settings, new ViewDataDictionary { { "SettingCategory", item.Type } })
+                            </div>
+                            j++;
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

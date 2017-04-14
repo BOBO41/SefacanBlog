@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+@model LoginModel
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap</title>
+    @Html.Style("~/Content/css/bootstrap.min.css")
+    @Html.Style("~/Content/css/styles.css")
+</head>
+<body>
+    <div class="page-content container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-wrapper">
+                    <div class="box">
+                        <div class="content-wrap">
+                            <h6>Giriş Yap</h6>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", @placeholder = "Kullanıcı adı" })
+                                <span class="text-danger" style="float:left;margin-bottom:10px">@Html.ValidationMessageFor(x => x.UserName)</span>
+                                @Html.PasswordFor(x => x.Password, new { @class = "form-control", @placeholder = "Şifre" })
+                                <span class="text-danger" style="float:left;margin-bottom:10px">@Html.ValidationMessageFor(x => x.Password)</span>
+                                <div class="action">
+                                    <input type="submit" class="btn btn-primary signup" value="Giriş" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Script("~/Content/js/jquery.min.js")
+    @Html.Script("~/Content/js/bootstrap.min.js")
+    @Html.Script("~/Content/js/jquery.unobtrusive-ajax.min.js")
+    @Html.Script("~/Content/js/jquery.validate.min.js")
+    @Html.Script("~/Content/js/jquery.validate.unobtrusive.min.js")
+</body>
+</html>

@@ -1,0 +1,17 @@
+D:\SEFACAN\Sefacan.Data\bin\Debug\Sefacan.Data.dll.config
+D:\SEFACAN\Sefacan.Data\bin\Debug\Sefacan.Data.dll
+D:\SEFACAN\Sefacan.Data\bin\Debug\Sefacan.Data.pdb
+D:\SEFACAN\Sefacan.Data\bin\Debug\Autofac.dll
+D:\SEFACAN\Sefacan.Data\bin\Debug\EntityFramework.dll
+D:\SEFACAN\Sefacan.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\SEFACAN\Sefacan.Data\bin\Debug\Sefacan.Core.dll
+D:\SEFACAN\Sefacan.Data\bin\Debug\Newtonsoft.Json.dll
+D:\SEFACAN\Sefacan.Data\bin\Debug\Sefacan.Core.pdb
+D:\SEFACAN\Sefacan.Data\bin\Debug\Sefacan.Core.dll.config
+D:\SEFACAN\Sefacan.Data\bin\Debug\Autofac.xml
+D:\SEFACAN\Sefacan.Data\bin\Debug\EntityFramework.xml
+D:\SEFACAN\Sefacan.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\SEFACAN\Sefacan.Data\bin\Debug\Newtonsoft.Json.xml
+D:\SEFACAN\Sefacan.Data\obj\Debug\Sefacan.Data.csprojResolveAssemblyReference.cache
+D:\SEFACAN\Sefacan.Data\obj\Debug\Sefacan.Data.dll
+D:\SEFACAN\Sefacan.Data\obj\Debug\Sefacan.Data.pdb

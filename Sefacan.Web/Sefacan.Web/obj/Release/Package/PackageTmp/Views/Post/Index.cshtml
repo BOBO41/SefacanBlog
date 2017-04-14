@@ -1,0 +1,165 @@
+﻿@model PostDetailModel
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Description;
+    if (!string.IsNullOrEmpty(Model.PicturePath))
+    {
+        ViewBag.Picture = Model.PicturePath;
+    }
+    ViewBag.CreateDate = Model.CreateDate.ToString("yyyy-MM-ddTHH:mm:ssZ");
+    ViewBag.UpdateDate = Model.UpdateDate.ToString("yyyy-MM-ddTHH:mm:ssZ");
+}
+<div class="boxed push-down-60">
+    <div class="meta">
+        <div class="col-xs-12">
+            <div class="meta__container--without-image">
+                <div class="row">
+                    <div class="col-xs-12  col-sm-8">
+                        <div class="meta__info">
+                            <span class="meta__author"><img src="@Setting("general.editor.picture").Value" alt="@Setting("general.editor.name").Value" width="30" height="30"> <a href="javascript:void(0)">@Setting("general.editor.name").Value</a> <a href="/@Model.CategoryUrl">@Model.CategoryName</a> </span>
+                            <span class="meta__date"><span class="glyphicon glyphicon-calendar"></span> &nbsp; @Model.CreateDate.ToRelativeFormat()</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12  col-sm-4">
+                        <div class="meta__comments">
+                            @if (Setting("post.comment.count").BoolValue && 
+                                Model.AllowComment && 
+                                Model.CommentCount != 0)
+                            {
+                                <a href="#comments">@Model.CommentCount Yorum&nbsp;</a>
+                            }
+                            @if (Setting("post.view.count").BoolValue)
+                            {
+                                if (Model.ViewCount != 0)
+                                {
+                                    <span>@Model.ViewCount kez okundu.</span>
+                                }
+                                else
+                                {
+                                    <span>Henüz okunmadı.</span>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin:0">
+        <div class="col-xs-10 col-xs-offset-1 push-down-60 no-padding">
+            <div class="post-content">
+                <h3>
+                    @Model.Title
+                </h3>
+                @Html.Raw(Model.FullContent)
+            </div>
+            <div class="row">
+                <div class="col-xs-12  col-sm-6">
+                    <div class="post-comments">
+                        <a class="btn btn-primary" href="#comments">Yorumlar</a>
+                    </div>
+                </div>
+                @if (Setting("general.socialmedia.enabled").BoolValue)
+                {
+                    <div class="col-xs-12  col-sm-6">
+                        <div class="social-icons" style="text-align:right">
+                            @*<a href="https://www.facebook.com/sharer/sharer.php?u=@WebHelper.GetCurrentUrl(true)" class="social-icons__container"><span class="zocial-facebook"></span></a>*@
+                            <a href="javascript:share()" class="social-icons__container"><span class="zocial-facebook"></span></a>
+                            <a href="https://twitter.com/intent/tweet?url=@WebHelper.GetCurrentUrl(true)&text=@Model.Title" class="social-icons__container"><span class="zocial-twitter"></span></a>
+                            <a href="https://plus.google.com/share?url=@WebHelper.GetCurrentUrl(true)" class="social-icons__container"> <span class="zocial-googleplus"></span></a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row">
+                <div class="col-xs-12  col-sm-6">
+                    <div class="post-author">
+                        <h6>Yazan</h6>
+                        <hr>
+                        <img src="@Setting("general.editor.picture").Value" width="50" height="50" alt="@Setting("general.editor.name").Value">
+                        <h5>
+                            <a href="javascript:void(0)">@Setting("general.editor.name").Value</a>
+                        </h5>
+                        <span class="post-author__text">@Setting("general.slogan").Value</span>
+                    </div>
+                </div>
+                <div class="col-xs-12  col-sm-6">
+                    <div class="tags">
+                        <h6>Etiketler</h6>
+                        <hr>
+                        @foreach (var item in Model.Tags)
+                        {
+                            <a href="/Search/@item.Name.ToLowerInvariant()" class="tags__link">@item.Name</a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <hr />
+            @if (Setting("post.comment.enabled").BoolValue && Model.AllowComment)
+            {
+                <div class="post-comments" id="comments">
+                    @if (Model.CommentCount != 0)
+                    {
+                        <h5>@Model.Title için yorumlar</h5>
+                    }
+                    @foreach (var item in Model.Comments)
+                    {
+                        <div class="comment-item">
+                            <img src="~/Content/img/nophoto.jpg" alt="@item.FullName" title="@item.FullName" />
+                            <span class="name">@item.FullName</span><span class="date">@item.CreateDate</span>
+                            <div class="clearfix"></div>
+                            <p>@item.Content</p>
+                            <a href="javascript:void(0)" data-id="@item.Id" class="reply">Cevapla <i class="glyphicon glyphicon-arrow-down"></i></a>
+                            @foreach (var child in item.ChildComments)
+                            {
+                                <div class="comment-subitem">
+                                    <img src="~/Content/img/nophoto.jpg" alt="@child.FullName" title="@child.FullName" />
+                                    <span class="name">@child.FullName</span><span class="date">@child.CreateDate</span>
+                                    <div class="clearfix"></div>
+                                    <p>@child.Content</p>
+                                </div>
+                            }
+                        </div>
+                    }
+                    <div class="row" id="commentRow">
+                        <div class="col-md-12">
+                            <h5 class="pull-left" style="margin:15px 0">Yorum yaz</h5>
+                            <a class="pull-left cancel hidden" style="margin:20px 15px;border:none" href="#">Vazgeç</a>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            @using (Html.BeginForm("Comment", "Post", FormMethod.Post, new { id = "commentForm" }))
+                            {
+                                <div class="col-xs-12 push-down-10">
+                                    <input type="text" class="form-control" placeholder="Ad soyad*" name="name" />
+                                </div>
+                                <div class="col-xs-12 push-down-10">
+                                    <input type="email" class="form-control" placeholder="Email*" name="email" />
+                                </div>
+                                <div class="col-xs-12 push-down-10">
+                                    <textarea name="message" class="form-control" rows="4" placeholder="Mesajınız*" style="resize:none"></textarea>
+                                </div>
+                                <div class="col-xs-12 push-down-10">
+                                    <input type="submit" value="Gönder" class="btn btn-primary pull-left" /> <span class="contact__obligatory pull-right">Email adresiniz yayınlanmayacaktır.</span>
+                                </div>
+                                <input type="hidden" value="0" name="parentId" />
+                                <input type="hidden" value="@Model.Id" name="postId" />
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            @if (Setting("post.related.view").BoolValue)
+            {
+                <div class="related-stories">
+                    <h6>Benzer Yazılar</h6>
+                    <hr>
+                    @foreach (var item in Model.RelatedPosts)
+                    {
+                        <h4><a href="/@item.Url">@item.Title</a></h4>
+                        <hr />
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

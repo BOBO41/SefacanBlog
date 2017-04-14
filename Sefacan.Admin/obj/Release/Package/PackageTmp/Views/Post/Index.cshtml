@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Yazılar";
+}
+@model IEnumerable<PostGridModel>
+<div class="col-md-10">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-box-large">
+                <a href="@Url.Action("Create","Post")" class="btn btn-success">Yazı Ekle</a>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Başlık</th>
+                                <th>Kategori</th>
+                                <th>Görüntülenme</th>
+                                <th>Aktiflik</th>
+                                <th>Güncellenme</th>
+                                <th>Eklenme</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Title</td>
+                                    <td>@item.CategoryName</td>
+                                    <td>@item.ViewCount</td>
+                                    <td>
+                                        @if (item.IsActive)
+                                        {
+                                            <span class="text-success">Aktif</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-warning">Pasif</span>
+                                        }
+                                    </td>
+                                    <td>@item.UpdateDate</td>
+                                    <td>@item.CreateDate</td>
+                                    <td>
+                                        <a href="@Url.Action("Edit", "Post", new { Id = item.Id })" class="btn btn-primary">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("Delete", "Post", new { Id = item.Id })" class="btn btn-danger btn-delete">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

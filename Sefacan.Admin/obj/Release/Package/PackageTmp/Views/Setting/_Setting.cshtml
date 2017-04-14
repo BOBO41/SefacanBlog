@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SettingItemModel>
+<input type="hidden" value="@ViewData["SettingCategory"]" name="category" id="category" />
+@{
+    foreach (var setting in Model)
+    {
+        <div class="form-group">
+            <label for="@setting.Name" class="col-md-2 control-label">@setting.Description</label>
+            <div class="col-md-10">
+                @if (setting.Type == Input.TextBox)
+                {
+                    <input id="@setting.Name" name="settingTextbox" type="text" class="form-control" value="@setting.Value" />
+                }
+                else if (setting.Type == Input.CheckBox)
+                {
+                    if (setting.Value.ToBoolean())
+                    {
+                        <input id="@setting.Name" name="settingCheckbox" type="checkbox" checked="checked" />
+                    }
+                    else
+                    {
+                        <input id="@setting.Name" name="settingCheckbox" type="checkbox" />
+                    }
+                }
+                else if (setting.Type == Input.Date)
+                {
+                    <input id="@setting.Name" name="settingDatebox" type="text" class="form-control datepicker" value="@setting.Value" />
+                }
+                else if (setting.Type == Input.Time)
+                {
+                    <input id="@setting.Name" name="settingTimebox" type="text" class="form-control timepicker" value="@setting.Value" />
+                }
+                else if (setting.Type == Input.Editor)
+                {
+                    <textarea id="@setting.Name" name="settingEditor" rows="4" class="form-control">@setting.Value</textarea>
+                }
+                else if (setting.Type == Input.Select)
+                {
+                    <select class="form-control" id="@setting.Name" name="settingSelect">
+                        @if (setting.Value.Contains(","))
+                        {
+                            foreach (var value in setting.Value.Split(','))
+                            {
+                                string selected = string.Empty;
+                                if (!string.IsNullOrEmpty(setting.SelectedValue) && value.Trim() == setting.SelectedValue.Trim())
+                                {
+                                    selected = "selected=\"selected\"";
+                                }
+                                <option value="@value.Trim()" @selected>@value.Trim()</option>
+                            }
+                        }
+                        else
+                        {
+                            <option value="@setting.Value">@setting.Value</option>
+                        }
+                    </select>
+                }
+            </div>
+        </div>
+    }
+}
+<div class="form-group">
+    <div class="col-md-12">
+        <input type="submit" value="Kaydet" class="btn btn-primary pull-right" />
+    </div>
+</div>

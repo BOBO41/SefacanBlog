@@ -1,0 +1,13 @@
+﻿@model IPagedList<PostModel>
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        @foreach (var item in Model)
+        {
+            @Html.Partial("_Post", item)
+        }
+        <div class="pagination">
+            @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount)
+        </div>
+    </div>
+    @Html.Action("Sidebar", "Home")
+</div>

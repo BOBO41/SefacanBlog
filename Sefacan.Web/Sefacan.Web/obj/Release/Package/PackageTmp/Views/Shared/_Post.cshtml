@@ -1,0 +1,82 @@
+﻿@model PostModel
+<div class="boxed push-down-45">
+    <div class="meta">
+        @if (!string.IsNullOrEmpty(Model.PicturePath))
+        {
+            <img class="wp-post-image" src="@Model.PicturePath" alt="@Model.Title" width="748" height="324">
+            <div class="meta__container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="meta__info">
+                            <span class="meta__author">
+                                <img src="@Setting("general.editor.picture").Value" alt="@Setting("general.editor.name").Value" width="30" height="30">
+                                <a href="javascript:void(0)">@Setting("general.editor.name").Value</a> <a href="/@Model.CategoryUrl">@Model.CategoryName</a>
+                            </span>
+                            <span class="meta__date">
+                                <span class="glyphicon glyphicon-calendar"></span> &nbsp;
+                                @Model.CreateDate.ToRelativeFormat()
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="meta__comments">
+                            @if (Setting("post.view.count").BoolValue)
+                            {
+                                <span>@Model.ViewCount kez okundu.</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-xs-12  col-sm-10  col-sm-offset-1">
+                    <div class="meta__container--without-image">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                    <span class="meta__author">
+                                        <img src="@Setting("general.editor.picture").Value" alt="@Setting("general.editor.name").Value" width="30" height="30">
+                                        <a href="javascript:void(0)">@Setting("general.editor.name").Value</a> <a href="/@Model.CategoryUrl">@Model.CategoryName</a>
+                                    </span>
+                                    <span class="meta__date">
+                                        <span class="glyphicon glyphicon-calendar"></span> &nbsp;
+                                        @Model.CreateDate.ToRelativeFormat()
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="meta__comments">
+                                    @if (Setting("post.view.count").BoolValue)
+                                    {
+                                        <span>@Model.ViewCount kez okundu.</span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="post-content--front-page">
+                <h2 class="front-page-title">
+                    <a href="/@Model.Url">@Model.Title</a>
+                </h2>
+                @Html.Raw(Model.ShortContent)
+            </div>
+            <a href="/@Model.Url">
+                <div class="read-more">
+                    Devamını Oku
+                    <div class="read-more__arrow">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
