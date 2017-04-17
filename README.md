@@ -1,6 +1,6 @@
 # SefacanBlog
 
-Şuanda bu yazıyı okuduğunuz web sitesini açık kaynak olarak paylaşm kararı aldım. Modern .Net teknolojilerinin ve günümüz projelerinin ihtiyaç duyduğu bir yapıya sahip. Blog projesini bu seviyede yapmak ne kadar gerekli diyebilirsiniz. Amaç kendimizi her daim geliştirmek olduğu için böyle bir yapıyı herkesin denemesini öneriyorum. Artık geliştirdiğim ve geliştireceğim projelerde bu Tasarım Kalıbı üzerinden gitmeyi ve yeni eklemeler yapmayı düşünüyorum.
+Sefacan.net alan adında barındırdığım web sitesini açık kaynak olarak paylaşma kararı aldım. Modern .Net teknolojilerinin ve günümüz projelerinin ihtiyaç duyduğu bir yapıya sahip. Blog projesini bu seviyede yapmak ne kadar gerekli diyebilirsiniz. Amaç kendimizi her daim geliştirmek olduğu için böyle bir yapıyı herkesin denemesini öneriyorum. Artık geliştirdiğim ve geliştireceğim projelerde bu Tasarım Kalıbı üzerinden gitmeyi ve yeni eklemeler yapmayı düşünüyorum.
 
 Kullandığım Kütüphane ve Teknolojiler
 
