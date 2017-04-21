@@ -80,7 +80,6 @@
     <Compile Include="Infrastracture\GenericRoute.cs" />
     <Compile Include="Infrastracture\GenericRouteExtensions.cs" />
     <Compile Include="Attributes\NoCacheAttribute.cs" />
-    <Compile Include="Infrastracture\UserPrincipal.cs" />
     <Compile Include="Infrastracture\ViewEngine.cs" />
     <Compile Include="Infrastracture\WebViewPage.cs" />
     <Compile Include="Infrastracture\XmlResult.cs" />

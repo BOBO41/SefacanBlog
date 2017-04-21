@@ -1,5 +1,4 @@
 ﻿using Sefacan.Core.Infrastructure;
-using System;
 using System.Text;
 using System.Web.Mvc;
 using System.Xml.Linq;
@@ -13,7 +12,7 @@ namespace Sefacan.Framework.Infrastructure
 
         public XmlResult(XDocument document)
         {
-            _document = document ?? throw new ArgumentNullException(nameof(document));
+            _document = document;
         }
 
         public override void ExecuteResult(ControllerContext context)

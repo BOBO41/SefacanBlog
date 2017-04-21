@@ -8,3 +8,13 @@ D:\SEFACAN\Sefacan.Core\bin\Debug\Newtonsoft.Json.xml
 D:\SEFACAN\Sefacan.Core\obj\Debug\Sefacan.Core.csprojResolveAssemblyReference.cache
 D:\SEFACAN\Sefacan.Core\obj\Debug\Sefacan.Core.dll
 D:\SEFACAN\Sefacan.Core\obj\Debug\Sefacan.Core.pdb
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\bin\Debug\Sefacan.Core.dll.config
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\bin\Debug\Sefacan.Core.dll
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\bin\Debug\Sefacan.Core.pdb
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\bin\Debug\Autofac.dll
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\bin\Debug\Autofac.xml
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\obj\Debug\Sefacan.Core.csprojResolveAssemblyReference.cache
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\obj\Debug\Sefacan.Core.dll
+C:\Users\sefa.can\Documents\GitHub\SefacanBlog\Sefacan.Core\obj\Debug\Sefacan.Core.pdb
