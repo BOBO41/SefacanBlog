@@ -46,8 +46,8 @@ namespace Sefacan.Admin.Controllers
                     return View();
                 }
 
-                string restaurantCookie = user.ToJsonString().ToBase64();
-                CookieHelper.Set(CookieConstant.CURRENT_USER, restaurantCookie, 1);
+                string userCookie = user.ToJsonString().ToBase64();
+                CookieHelper.Set(CookieConstant.CURRENT_USER, userCookie, 1);
 
                 if (string.IsNullOrEmpty(url))
                     return HomePage();
